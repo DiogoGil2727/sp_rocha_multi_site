@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roda ao Centro — SP Rocha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand"><a href="index.html">SP ROCHA</a></div>
+      <div class="navlinks">
+        <a href="roda-foz.html">Roda da Foz</a>
+        <a href="roda-centro.html">Roda ao Centro</a>
+        <a href="musicas.html">Músicas</a>
+      </div>
+    </nav>
+
+    <div class="sectionHead">
+      <h2>RODA AO CENTRO</h2>
+      <p>(localização) · exemplo</p>
+    </div>
+
+    <!-- EVENTO 06/2025 -->
+    <article class="folder" id="centro-062025">
+      <div class="folder__top">
+        <div class="folder__thumb">
+          <img src="assets/img/centro_062025_event.svg" alt="Roda ao Centro 06/2025">
+        </div>
+        <div class="folder__meta">
+          <div>
+            <h3>06/2025</h3>
+            <p class="sub">Local · cidade</p>
+          </div>
+          <div class="pill">Destaque</div>
+        </div>
+      </div>
+
+      <div class="folder__body">
+        <div class="videoWrap">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+            title="SP Rocha — Roda ao Centro 06/2025"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="videoCaption">
+            <span>Vídeo: YouTube (embed oficial)</span>
+            <span>Créditos: <a class="smallLink" href="#" onclick="return false;">Roda ao Centro</a></span>
+          </div>
+        </div>
+
+        <aside class="gallery">
+          <h4>Fotos da batalha</h4>
+          <div class="gridPhotos">
+            <div class="thumb" data-full="assets/img/centro_062025_1.svg" data-label="Roda ao Centro 06/2025 — Foto 1">
+              <img src="assets/img/centro_062025_1.svg" alt="Foto 1">
+            </div>
+            <div class="thumb" data-full="assets/img/centro_062025_2.svg" data-label="Roda ao Centro 06/2025 — Foto 2">
+              <img src="assets/img/centro_062025_2.svg" alt="Foto 2">
+            </div>
+            <div class="thumb" data-full="assets/img/centro_062025_3.svg" data-label="Roda ao Centro 06/2025 — Foto 3">
+              <img src="assets/img/centro_062025_3.svg" alt="Foto 3">
+            </div>
+            <div class="thumb" data-full="assets/img/centro_062025_4.svg" data-label="Roda ao Centro 06/2025 — Foto 4">
+              <img src="assets/img/centro_062025_4.svg" alt="Foto 4">
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <div class="footer">
+      Feito para centralizar conteúdo sem roubar views — embeds oficiais + créditos.
+    </div>
+  </div>
+
+  <!-- LIGHTBOX (usado nas páginas com galeria) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria">
+    <div class="lightbox__panel">
+      <div class="lightbox__bar">
+        <span id="lightboxLabel">Foto</span>
+        <button class="btn" id="closeBtn">Fechar</button>
+      </div>
+      <img id="lightboxImg" class="lightbox__img" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="assets/js/lightbox.js"></script>
+</body>
+</html>

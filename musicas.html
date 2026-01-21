@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Músicas — SP Rocha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand"><a href="index.html">SP ROCHA</a></div>
+      <div class="navlinks">
+        <a href="roda-foz.html">Roda da Foz</a>
+        <a href="roda-centro.html">Roda ao Centro</a>
+        <a href="musicas.html">Músicas</a>
+      </div>
+    </nav>
+
+    <div class="sectionHead">
+      <h2>MÚSICAS</h2>
+      <p>Links oficiais (exemplo)</p>
+    </div>
+
+    <article class="folder">
+      <div class="folder__top">
+        <div class="folder__thumb">
+          <img src="assets/img/musicas_thumb.svg" alt="Músicas">
+        </div>
+        <div class="folder__meta">
+          <div>
+            <h3>Singles & Participações</h3>
+            <p class="sub">Adiciona aqui tudo o que não é batalha</p>
+          </div>
+          <div class="pill">Arquivo</div>
+        </div>
+      </div>
+
+      <div class="folder__body" style="grid-template-columns: 1fr;">
+        <div class="videoWrap">
+          <div style="padding:14px 14px 6px; color: var(--muted); font-size: 13px;">
+            Coloca links (YouTube, Spotify, etc.). Podes usar embeds também.
+          </div>
+          <div style="padding: 0 14px 16px;">
+            <ul style="margin:0; padding-left:18px; line-height:1.9;">
+              <li><a class="smallLink" href="#" onclick="return false;">Faixa 1 — YouTube</a></li>
+              <li><a class="smallLink" href="#" onclick="return false;">Faixa 2 — Spotify</a></li>
+              <li><a class="smallLink" href="#" onclick="return false;">Faixa 3 — SoundCloud</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="footer">
+      Feito para centralizar conteúdo sem roubar views — embeds oficiais + créditos.
+    </div>
+  </div>
+
+  <!-- LIGHTBOX (usado nas páginas com galeria) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria">
+    <div class="lightbox__panel">
+      <div class="lightbox__bar">
+        <span id="lightboxLabel">Foto</span>
+        <button class="btn" id="closeBtn">Fechar</button>
+      </div>
+      <img id="lightboxImg" class="lightbox__img" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="assets/js/lightbox.js"></script>
+</body>
+</html>
