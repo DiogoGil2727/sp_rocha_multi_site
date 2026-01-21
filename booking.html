@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking — SP Rocha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand"><a href="index.html">SP ROCHA</a></div>
+      <div class="navlinks">
+        <a href="roda-foz.html">Roda da Foz</a>
+        <a href="roda-centro.html">Roda ao Centro</a>
+        <a href="musicas.html">Músicas</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero__banner"></div>
+      <div class="hero__content">
+        <div class="avatar" aria-label="Foto de perfil"></div>
+        <div class="titleBlock">
+          <h1 class="name">SP ROCHA</h1>
+          <div class="chips">
+            <div class="chip"><strong>Booking:</strong> sprocha.booking@gmail.com</div>
+            <div class="chip"><strong>IG:</strong> @sp_rocha_</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sectionHead">
+      <h2>PASTAS</h2>
+      <p>Clica numa pasta para ver eventos</p>
+    </div>
+
+    <section class="gridFolders">
+      <a class="folderCard" href="roda-foz.html">
+        <div class="folderCard__img"><img src="assets/img/foz.jpg" alt="Roda da Foz"></div>
+        <div>
+          <h3>Roda Foz</h3>
+          <p class="meta">Forte São João da Foz, Porto</p>
+        </div>
+      </a>
+
+      <a class="folderCard" href="roda-centro.html">
+        <div class="folderCard__img"><img src="assets/img/roda_centro_thumb.svg" alt="Roda ao Centro"></div>
+        <div>
+          <h3>Roda ao Centro</h3>
+          <p class="meta">Centro · (localização)</p>
+          <p class="desc">Arquivo completo de participações com organização e créditos.</p>
+        </div>
+      </a>
+
+      <a class="folderCard" href="musicas.html">
+        <div class="folderCard__img"><img src="assets/img/musicas_thumb.svg" alt="Músicas"></div>
+        <div>
+          <h3>Músicas</h3>
+          <p class="meta">Singles · Participações</p>
+          <p class="desc">Lista de faixas com links oficiais (YouTube/Spotify/etc.).</p>
+        </div>
+      </a>
+    </section>
+
+  </div>
+
+  <!-- LIGHTBOX (usado nas páginas com galeria) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria">
+    <div class="lightbox__panel">
+      <div class="lightbox__bar">
+        <span id="lightboxLabel">Foto</span>
+        <button class="btn" id="closeBtn">Fechar</button>
+      </div>
+      <img id="lightboxImg" class="lightbox__img" src="" alt=""/>
+    </div>
+  </div>
+
+  <script src="assets/js/lightbox.js"></script>
+</body>
+</html>
