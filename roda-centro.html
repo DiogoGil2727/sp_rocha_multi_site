@@ -34,7 +34,7 @@
     <div class="folder__meta">
       <div>
         <h3>07/2025</h3>
-        <p class="sub">Forte São João da Foz, Porto</p>
+        <p class="sub">Coimbra, Portugal</p>
       </div>
 
       <!-- REMOVIDO: botão "Destaque" -->
@@ -53,8 +53,8 @@
         allowfullscreen></iframe>
 
       <div class="videoCaption">
-        <span id="title-foz-072025">Freestyle do vencedor (Destaque)</span>
-        <span>Créditos: <a class="smallLink" href="#" onclick="return false;">Roda da Foz</a></span>
+        <span id="title-foz-072025">Freestyle do vencedor</span>
+        <span>Créditos: <a class="smallLink" href="#" onclick="return false;">Roda o Centro - Hip Hop Coimbra</a></span>
       </div>
     </div>
 
@@ -72,7 +72,7 @@
           <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
             <div style="text-align:center;">
               <div style="font-weight:600; font-size:13px;">Freestyle</div>
-              <div style="color:var(--muted); font-size:12px; margin-top:6px;">(Destaque)</div>
+              
             </div>
           </div>
         </a>
@@ -241,8 +241,37 @@
     </aside>
   </div>
 </article>
+<!-- POPUP FOTOS (simples) -->
+<div id="photos-foz-072025"
+     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.78); z-index:1000; padding:20px; align-items:center; justify-content:center;">
+  <div style="width:min(1100px,100%); background:rgba(15,17,21,.94); border:1px solid var(--stroke); border-radius:16px; overflow:hidden;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-bottom:1px solid var(--stroke); color:var(--muted); font-size:13px;">
+      <span>Roda da Foz — 07/2025 · Galeria de fotos</span>
+      <button class="btn" data-close-photos="photos-foz-072025">Fechar</button>
+    </div>
 
-<!-- JS: troca o vídeo principal + abre/fecha popup de fotos -->
+    <div style="padding:14px;">
+      <div class="gridPhotos">
+        <div class="thumb" data-full="assets/img/foz_072025_1.svg" data-label="Roda da Foz 07/2025 — Foto 1">
+          <img src="assets/img/foz_072025_1.svg" alt="Foto 1">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_2.svg" data-label="Roda da Foz 07/2025 — Foto 2">
+          <img src="assets/img/foz_072025_2.svg" alt="Foto 2">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_3.svg" data-label="Roda da Foz 07/2025 — Foto 3">
+          <img src="assets/img/foz_072025_3.svg" alt="Foto 3">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_4.svg" data-label="Roda da Foz 07/2025 — Foto 4">
+          <img src="assets/img/foz_072025_4.svg" alt="Foto 4">
+        </div>
+      </div>
+
+      <p style="margin:12px 0 0; color:var(--muted); font-size:13px;">Clica numa foto para abrir em grande.</p>
+    </div>
+  </div>
+</div>
+
+ 
 <script>
   // Trocar vídeo principal ao clicar nos “cards” de vídeo
   document.querySelectorAll(".videoThumb").forEach(el => {
