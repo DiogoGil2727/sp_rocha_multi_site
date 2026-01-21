@@ -47,7 +47,12 @@
           Preenche o formulário para eventos e parcerias.
         </p>
 
-        <form name="booking" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 20px;">
+        <form action="https://formspree.io/f/xpqqblpw" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+          <input type="hidden" name="_subject" value="Novo Pedido de Booking (Site SP Rocha)">
+          
+          <!-- Redireciona a pessoa de volta para esta página após enviar -->
+          <input type="hidden" name="_next" value="booking.html">
+
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <label for="name" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Nome</label>
             <input type="text" id="name" name="name" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
