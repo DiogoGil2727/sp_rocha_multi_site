@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Roda ao Centro — SP Rocha</title>
+  <title>Roda da Foz — SP Rocha</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,74 +21,328 @@
     </nav>
 
     <div class="sectionHead">
-      <h2>RODA AO CENTRO</h2>
-      <p>(localização) · exemplo</p>
+      <h2>RODA DA FOZ</h2>
+      <p>Porto · Foz do Douro</p>
     </div>
 
-    <!-- EVENTO 06/2025 -->
-    <article class="folder" id="centro-062025">
-      <div class="folder__top">
-        <div class="folder__thumb">
-          <img src="assets/img/centro_062025_event.svg" alt="Roda ao Centro 06/2025">
-        </div>
-        <div class="folder__meta">
-          <div>
-            <h3>06/2025</h3>
-            <p class="sub">Local · cidade</p>
-          </div>
-          <div class="pill">Destaque</div>
-        </div>
+    <!-- EVENTO 07/2025 -->
+<article class="folder" id="foz-072025">
+  <div class="folder__top">
+    <div class="folder__thumb">
+      <img src="assets/img/foz_072025_event.svg" alt="Roda da Foz 07/2025">
+    </div>
+    <div class="folder__meta">
+      <div>
+        <h3>07/2025</h3>
+        <p class="sub">Foz do Douro, Porto</p>
       </div>
-
-      <div class="folder__body">
-        <div class="videoWrap">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-            title="SP Rocha — Roda ao Centro 06/2025"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <div class="videoCaption">
-            <span>Vídeo: YouTube (embed oficial)</span>
-            <span>Créditos: <a class="smallLink" href="#" onclick="return false;">Roda ao Centro</a></span>
-          </div>
-        </div>
-
-        <aside class="gallery">
-          <h4>Fotos da batalha</h4>
-          <div class="gridPhotos">
-            <div class="thumb" data-full="assets/img/centro_062025_1.svg" data-label="Roda ao Centro 06/2025 — Foto 1">
-              <img src="assets/img/centro_062025_1.svg" alt="Foto 1">
-            </div>
-            <div class="thumb" data-full="assets/img/centro_062025_2.svg" data-label="Roda ao Centro 06/2025 — Foto 2">
-              <img src="assets/img/centro_062025_2.svg" alt="Foto 2">
-            </div>
-            <div class="thumb" data-full="assets/img/centro_062025_3.svg" data-label="Roda ao Centro 06/2025 — Foto 3">
-              <img src="assets/img/centro_062025_3.svg" alt="Foto 3">
-            </div>
-            <div class="thumb" data-full="assets/img/centro_062025_4.svg" data-label="Roda ao Centro 06/2025 — Foto 4">
-              <img src="assets/img/centro_062025_4.svg" alt="Foto 4">
-            </div>
-          </div>
-        </aside>
-      </div>
-    </article>
-
-    <div class="footer">
-      Feito para centralizar conteúdo sem roubar views — embeds oficiais + créditos.
+      <div class="pill">Destaque</div>
     </div>
   </div>
 
-  <!-- LIGHTBOX (usado nas páginas com galeria) -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria">
-    <div class="lightbox__panel">
-      <div class="lightbox__bar">
-        <span id="lightboxLabel">Foto</span>
-        <button class="btn" id="closeBtn">Fechar</button>
+  <div class="folder__body">
+    <!-- VÍDEO PRINCIPAL (ESQUERDA) -->
+    <div class="videoWrap">
+      <iframe
+        id="player-foz-072025"
+        src="https://www.youtube.com/embed/VIDEO_ID_FREESTYLE_AQUI"
+        title="SP Rocha — Roda da Foz 07/2025"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <div class="videoCaption">
+        <span id="title-foz-072025">Freestyle do vencedor (Destaque)</span>
+        <span>Créditos: <a class="smallLink" href="#" onclick="return false;">Roda da Foz</a></span>
       </div>
-      <img id="lightboxImg" class="lightbox__img" src="" alt=""/>
+    </div>
+
+    <!-- PAINEL DIREITO: VÍDEOS + BOTÃO FOTOS -->
+    <aside class="gallery">
+      <h4>Vídeos da batalha</h4>
+
+      <!-- Mantém a tua gridPhotos (2x2). Aqui em vez de fotos são “cards” de vídeo -->
+      <div class="gridPhotos">
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_FREESTYLE_AQUI"
+           data-title="Freestyle do vencedor (Destaque)">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Freestyle</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">(Destaque)</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_QUARTOS_AQUI"
+           data-title="Quartos de Final — Roda da Foz 07/2025">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Quartos</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">07/2025</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_SEMI_AQUI"
+           data-title="Semi-Final — Roda da Foz 07/2025">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Semi-Final</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">07/2025</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_FINAL_AQUI"
+           data-title="Final — Roda da Foz 07/2025">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Final</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">07/2025</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Botão para abrir galeria de fotos (popup) -->
+      <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+        <button class="btn" data-open-photos="photos-foz-072025">Ver galeria de fotos</button>
+      </div>
+    </aside>
+  </div>
+</article>
+
+<!-- POPUP FOTOS (simples) -->
+<div id="photos-foz-072025"
+     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.78); z-index:1000; padding:20px; align-items:center; justify-content:center;">
+  <div style="width:min(1100px,100%); background:rgba(15,17,21,.94); border:1px solid var(--stroke); border-radius:16px; overflow:hidden;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-bottom:1px solid var(--stroke); color:var(--muted); font-size:13px;">
+      <span>Roda da Foz — 07/2025 · Galeria de fotos</span>
+      <button class="btn" data-close-photos="photos-foz-072025">Fechar</button>
+    </div>
+
+    <div style="padding:14px;">
+      <!-- Usa as tuas thumbs normais para abrir no LIGHTBOX -->
+      <div class="gridPhotos">
+        <div class="thumb" data-full="assets/img/foz_072025_1.svg" data-label="Roda da Foz 07/2025 — Foto 1">
+          <img src="assets/img/foz_072025_1.svg" alt="Foto 1">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_2.svg" data-label="Roda da Foz 07/2025 — Foto 2">
+          <img src="assets/img/foz_072025_2.svg" alt="Foto 2">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_3.svg" data-label="Roda da Foz 07/2025 — Foto 3">
+          <img src="assets/img/foz_072025_3.svg" alt="Foto 3">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_4.svg" data-label="Roda da Foz 07/2025 — Foto 4">
+          <img src="assets/img/foz_072025_4.svg" alt="Foto 4">
+        </div>
+      </div>
+
+      <p style="margin:12px 0 0; color:var(--muted); font-size:13px;">Clica numa foto para abrir em grande.</p>
+    </div>
+  </div>
+</div>
+
+<!-- EVENTO 07/2025 -->
+<article class="folder" id="foz-072025">
+  <div class="folder__top">
+    <div class="folder__thumb">
+      <img src="assets/img/foz_072025_event.svg" alt="Roda da Foz 07/2025">
+    </div>
+    <div class="folder__meta">
+      <div>
+        <h3>07/2025</h3>
+        <p class="sub">Foz do Douro, Porto</p>
+      </div>
+      <div class="pill">Destaque</div>
     </div>
   </div>
 
-  <script src="assets/js/lightbox.js"></script>
-</body>
-</html>
+  <div class="folder__body">
+    <!-- VÍDEO PRINCIPAL (ESQUERDA) -->
+    <div class="videoWrap">
+      <iframe
+        id="player-foz-072025"
+        src="https://www.youtube.com/embed/VIDEO_ID_FREESTYLE_AQUI"
+        title="SP Rocha — Roda da Foz 07/2025"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <div class="videoCaption">
+        <span id="title-foz-072025">Freestyle do vencedor (Destaque)</span>
+        <span>Créditos: <a class="smallLink" href="#" onclick="return false;">Roda da Foz</a></span>
+      </div>
+    </div>
+
+    <!-- PAINEL DIREITO: VÍDEOS + BOTÃO FOTOS -->
+    <aside class="gallery">
+      <h4>Vídeos da batalha</h4>
+
+      <!-- Mantém a tua gridPhotos (2x2). Aqui em vez de fotos são “cards” de vídeo -->
+      <div class="gridPhotos">
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_FREESTYLE_AQUI"
+           data-title="Freestyle do vencedor (Destaque)">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Freestyle</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">(Destaque)</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_QUARTOS_AQUI"
+           data-title="Quartos de Final — Roda da Foz 07/2025">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Quartos</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">07/2025</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_SEMI_AQUI"
+           data-title="Semi-Final — Roda da Foz 07/2025">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Semi-Final</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">07/2025</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#"
+           class="thumb videoThumb"
+           data-target="player-foz-072025"
+           data-title-target="title-foz-072025"
+           data-video-id="VIDEO_ID_FINAL_AQUI"
+           data-title="Final — Roda da Foz 07/2025">
+          <div style="height:120px; display:flex; align-items:center; justify-content:center; padding:10px;">
+            <div style="text-align:center;">
+              <div style="font-weight:600; font-size:13px;">Final</div>
+              <div style="color:var(--muted); font-size:12px; margin-top:6px;">07/2025</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Botão para abrir galeria de fotos (popup) -->
+      <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+        <button class="btn" data-open-photos="photos-foz-072025">Ver galeria de fotos</button>
+      </div>
+    </aside>
+  </div>
+</article>
+
+<!-- POPUP FOTOS (simples) -->
+<div id="photos-foz-072025"
+     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.78); z-index:1000; padding:20px; align-items:center; justify-content:center;">
+  <div style="width:min(1100px,100%); background:rgba(15,17,21,.94); border:1px solid var(--stroke); border-radius:16px; overflow:hidden;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-bottom:1px solid var(--stroke); color:var(--muted); font-size:13px;">
+      <span>Roda da Foz — 07/2025 · Galeria de fotos</span>
+      <button class="btn" data-close-photos="photos-foz-072025">Fechar</button>
+    </div>
+
+    <div style="padding:14px;">
+      <!-- Usa as tuas thumbs normais para abrir no LIGHTBOX -->
+      <div class="gridPhotos">
+        <div class="thumb" data-full="assets/img/foz_072025_1.svg" data-label="Roda da Foz 07/2025 — Foto 1">
+          <img src="assets/img/foz_072025_1.svg" alt="Foto 1">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_2.svg" data-label="Roda da Foz 07/2025 — Foto 2">
+          <img src="assets/img/foz_072025_2.svg" alt="Foto 2">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_3.svg" data-label="Roda da Foz 07/2025 — Foto 3">
+          <img src="assets/img/foz_072025_3.svg" alt="Foto 3">
+        </div>
+        <div class="thumb" data-full="assets/img/foz_072025_4.svg" data-label="Roda da Foz 07/2025 — Foto 4">
+          <img src="assets/img/foz_072025_4.svg" alt="Foto 4">
+        </div>
+      </div>
+
+      <p style="margin:12px 0 0; color:var(--muted); font-size:13px;">Clica numa foto para abrir em grande.</p>
+    </div>
+  </div>
+</div>
+
+<!-- JS: troca o vídeo principal + abre/fecha popup de fotos -->
+<script>
+  // Trocar vídeo principal ao clicar nos “cards” de vídeo
+  document.querySelectorAll(".videoThumb").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      const playerId = el.dataset.target;
+      const titleId  = el.dataset.titleTarget;
+      const videoId  = el.dataset.videoId;
+      const title    = el.dataset.title || "Vídeo";
+
+      const iframe = document.getElementById(playerId);
+      const titleEl = document.getElementById(titleId);
+
+      if (iframe) iframe.src = "https://www.youtube.com/embed/" + videoId;
+      if (titleEl) titleEl.textContent = title;
+    });
+  });
+
+  // Abrir popup de fotos
+  document.querySelectorAll("[data-open-photos]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-open-photos");
+      const modal = document.getElementById(id);
+      if(modal){
+        modal.style.display = "flex";
+      }
+    });
+  });
+
+  // Fechar popup de fotos
+  document.querySelectorAll("[data-close-photos]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-close-photos");
+      const modal = document.getElementById(id);
+      if(modal){
+        modal.style.display = "none";
+      }
+    });
+  });
+
+  // Fechar popup ao clicar fora
+  document.querySelectorAll("[id^='photos-']").forEach(modal => {
+    modal.addEventListener("click", (e) => {
+      if(e.target === modal) modal.style.display = "none";
+    });
+  });
+
+  // ESC fecha popup
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape"){
+      document.querySelectorAll("[id^='photos-']").forEach(modal => modal.style.display = "none");
+    }
+  });
+</script>
