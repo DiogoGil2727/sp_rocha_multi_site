@@ -17,6 +17,7 @@
         <a href="roda-foz.html">Roda da Foz</a>
         <a href="roda-centro.html">Roda ao Centro</a>
         <a href="musicas.html">Músicas</a>
+        <a href="booking.html" style="font-weight: 600;">Booking</a>
       </div>
     </nav>
 
@@ -28,58 +29,46 @@
           <h1 class="name">SP ROCHA</h1>
           <div class="chips">
             <div class="chip"><strong>Booking:</strong> sprocha.booking@gmail.com</div>
-            <div class="chip"><strong>IG:</strong> @sp_rocha_</div>
+            <div class="chip"><strong>IG:</strong> @sp.rocha_</div>
           </div>
         </div>
       </div>
     </section>
 
     <div class="sectionHead">
-      <h2>PASTAS</h2>
-      <p>Clica numa pasta para ver eventos</p>
+      <h2>CONTACTOS</h2>
+      <p>Booking & Informações</p>
     </div>
 
-    <section class="gridFolders">
-      <a class="folderCard" href="roda-foz.html">
-        <div class="folderCard__img"><img src="assets/img/foz.jpg" alt="Roda da Foz"></div>
-        <div>
-          <h3>Roda Foz</h3>
-          <p class="meta">Forte São João da Foz, Porto</p>
-        </div>
-      </a>
+    <article class="folder">
+      <div class="folder__body" style="display: block; padding: 40px 20px; max-width: 600px; margin: 0 auto;">
+        <h3 style="text-align: center; margin-bottom: 10px;">Vamos trabalhar juntos?</h3>
+        <p style="text-align: center; margin-bottom: 30px; color: var(--muted);">
+          Preenche o formulário para eventos e parcerias.
+        </p>
 
-      <a class="folderCard" href="roda-centro.html">
-        <div class="folderCard__img"><img src="assets/img/roda_centro_thumb.svg" alt="Roda ao Centro"></div>
-        <div>
-          <h3>Roda ao Centro</h3>
-          <p class="meta">Centro · (localização)</p>
-          <p class="desc">Arquivo completo de participações com organização e créditos.</p>
-        </div>
-      </a>
+        <form name="booking" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="name" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Nome</label>
+            <input type="text" id="name" name="name" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
+          </div>
 
-      <a class="folderCard" href="musicas.html">
-        <div class="folderCard__img"><img src="assets/img/musicas_thumb.svg" alt="Músicas"></div>
-        <div>
-          <h3>Músicas</h3>
-          <p class="meta">Singles · Participações</p>
-          <p class="desc">Lista de faixas com links oficiais (YouTube/Spotify/etc.).</p>
-        </div>
-      </a>
-    </section>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="email" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Email</label>
+            <input type="email" id="email" name="email" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
+          </div>
 
-  </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="message" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Mensagem</label>
+            <textarea id="message" name="message" rows="5" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit; resize: vertical;"></textarea>
+          </div>
 
-  <!-- LIGHTBOX (usado nas páginas com galeria) -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria">
-    <div class="lightbox__panel">
-      <div class="lightbox__bar">
-        <span id="lightboxLabel">Foto</span>
-        <button class="btn" id="closeBtn">Fechar</button>
+          <button type="submit" class="btn" style="padding: 16px; font-size: 16px; margin-top: 10px; cursor: pointer; width: 100%;">Enviar Pedido</button>
+        </form>
       </div>
-      <img id="lightboxImg" class="lightbox__img" src="" alt=""/>
-    </div>
+    </article>
+
   </div>
 
-  <script src="assets/js/lightbox.js"></script>
 </body>
 </html>
