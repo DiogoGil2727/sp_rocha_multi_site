@@ -98,7 +98,7 @@
   </div>
 </a>
 
-  </div>
+  
 
   <!-- LIGHTBOX (usado nas páginas com galeria) -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria">
@@ -112,6 +112,59 @@
   </div>
 
   <script src="assets/js/lightbox.js"></script>
+
+<div class="sectionHead">
+  <h2>Galeria</h2>
+</div>
+
+<div class="mosaicLoop" id="mosaicLoop">
+  <div class="mosaicLoop__track" id="mosaicTrack">
+
+    <a class="mosaicLoop__item mosaicLoop__item--tall" href="#"
+       data-full="assets/img/1.jpg" data-label="Batalha — Round">
+      <img src="assets/img/1.jpg" alt="SP Rocha — Close">
+    </a>
+
+    <a class="mosaicLoop__item" href="#"
+       data-full="assets/img/2.jpg" data-label="Batalha — Round">
+      <img src="assets/img/2.jpg" alt="Batalha — Round">
+    </a>
+
+    <a class="mosaicLoop__item" href="#"
+       data-full="assets/img/4.png" data-label="Batalha — Round">
+      <img src="assets/img/4.png" alt="Backstage">
+    </a>
+
+    <a class="mosaicLoop__item mosaicLoop__item--wide" href="#"
+       data-full="assets/img/5.jpg" data-label="Batalha — Round">
+      <img src="assets/img/5.jpg" alt="Palco — noite">
+    </a>
+
+    <a class="mosaicLoop__item mosaicLoop__item--wide" href="#"
+       data-full="assets/img/6.jpg" data-label="Batalha — Round">
+      <img src="assets/img/6.jpg" alt="Palco — noite">
+    </a>
+
+    <a class="mosaicLoop__item mosaicLoop__item--wide" href="#"
+       data-full="assets/img/7.jpg" data-label="Batalha — Round">
+      <img src="assets/img/7.jpg" alt="Palco — noite">
+    </a>
+
+    <a class="mosaicLoop__item mosaicLoop__item--wide" href="#"
+       data-full="assets/img/8.jpg" data-label="Batalha — Round">
+      <img src="assets/img/8.jpg" alt="Palco — noite">
+    </a>
+
+    <!-- mete mais aqui -->
+  </div>
+</div>
+
+</div>
+
+
+
+
+  
 </body>
 <footer class="footer">
   <div class="footer__inner">
@@ -138,3 +191,82 @@
 </script>
 
 </html>
+<script>
+(() => {
+  const track = document.getElementById("mosaicTrack");
+  if(!track) return;
+
+  // Guarda os originais
+  const originals = Array.from(track.children);
+
+  // 1) INFINITE: 3 blocos (clone + original + clone)
+  const fragLeft = document.createDocumentFragment();
+  const fragRight = document.createDocumentFragment();
+
+  originals.forEach(n => fragLeft.appendChild(n.cloneNode(true)));
+  originals.forEach(n => fragRight.appendChild(n.cloneNode(true)));
+
+  // mete clones antes e depois
+  track.prepend(fragLeft);
+  track.append(fragRight);
+
+  // centra no “bloco do meio”
+  requestAnimationFrame(() => {
+    const third = track.scrollWidth / 3;
+    track.scrollLeft = third;
+  });
+
+  // loop guard (teleporta discretamente)
+  function loopGuard(){
+    const third = track.scrollWidth / 3;
+    if (track.scrollLeft < third * 0.35) track.scrollLeft += third;
+    if (track.scrollLeft > third * 1.65) track.scrollLeft -= third;
+  }
+  track.addEventListener("scroll", loopGuard, { passive:true });
+
+  // 2) Wheel vertical -> horizontal
+  track.addEventListener("wheel", (e) => {
+    const absX = Math.abs(e.deltaX);
+    const absY = Math.abs(e.deltaY);
+    if (absX > absY) return; // trackpad horizontal normal
+    e.preventDefault();
+    track.scrollLeft += e.deltaY * 1.2;
+  }, { passive:false });
+
+  // 3) Drag desktop
+  let down=false, startX=0, startScroll=0;
+  track.addEventListener("mousedown", (e) => {
+    down = true;
+    startX = e.pageX;
+    startScroll = track.scrollLeft;
+  });
+  window.addEventListener("mouseup", () => down=false);
+  window.addEventListener("mousemove", (e) => {
+    if(!down) return;
+    e.preventDefault();
+    track.scrollLeft = startScroll - (e.pageX - startX) * 1.2;
+  });
+
+  // 4) Lightbox (delegação)
+  track.addEventListener("click", (e) => {
+    const item = e.target.closest(".mosaicLoop__item");
+    if(!item) return;
+    e.preventDefault();
+
+    const full = item.getAttribute("data-full") || item.querySelector("img")?.src;
+    const label = item.getAttribute("data-label") || "Foto";
+
+    const box = document.getElementById("lightbox");
+    const img = document.getElementById("lightboxImg");
+    const txt = document.getElementById("lightboxLabel");
+    if(!box || !img || !txt || !full) return;
+
+    img.src = full;
+    img.alt = label;
+    txt.textContent = label;
+    box.classList.add("open");
+  });
+})();
+</script>
+
+
