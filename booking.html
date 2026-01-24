@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking — SP Rocha</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <nav class="nav">
@@ -28,11 +31,21 @@
         <div class="titleBlock">
           <h1 class="name">SP ROCHA</h1>
           <div class="chips">
-            <a href="https://www.instagram.com/sp.rocha_/" target="_blank" rel="noopener" class="chip" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="https://www.instagram.com/sp.rocha_/" target="_blank" rel="noopener" class="chip"
+              style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
             </a>
-            <a href="https://www.tiktok.com/@sprocha9" target="_blank" rel="noopener" class="chip" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            <a href="https://www.tiktok.com/@sprocha9" target="_blank" rel="noopener" class="chip"
+              style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
             </a>
           </div>
         </div>
@@ -48,31 +61,41 @@
       <div class="folder__body" style="display: block; padding: 40px 20px; max-width: 600px; margin: 0 auto;">
         <h3 style="text-align: center; margin-bottom: 10px;">Vamos trabalhar juntos?</h3>
         <p style="text-align: center; margin-bottom: 30px; color: var(--muted);">
-          Preenche o formulário para projetos, propostas de trabalho (Listas escolares / pocket shows de batalha ou espetáculos).
+          Preenche o formulário para projetos, propostas de trabalho (Listas escolares / pocket shows de batalha ou
+          espetáculos).
         </p>
 
-        <form action="https://formspree.io/f/xpqqblpw" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <form action="https://formspree.io/f/xpqqblpw" method="POST"
+          style="display: flex; flex-direction: column; gap: 20px;">
           <input type="hidden" name="_subject" value="Novo Pedido de Booking (Site SP Rocha)">
 
           <!-- Redireciona a pessoa de volta para esta página após enviar -->
           <input type="hidden" name="_next" value="booking.html">
 
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="name" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Nome</label>
-            <input type="text" id="name" name="name" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
+            <label for="name"
+              style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Nome</label>
+            <input type="text" id="name" name="name" required
+              style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="email" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Email</label>
-            <input type="email" id="email" name="email" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
+            <label for="email"
+              style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Email</label>
+            <input type="email" id="email" name="email" required
+              style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit;">
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="message" style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Mensagem</label>
-            <textarea id="message" name="message" rows="5" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit; resize: vertical;"></textarea>
+            <label for="message"
+              style="font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;">Mensagem</label>
+            <textarea id="message" name="message" rows="5" required
+              style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1d24; color: #fff; font-family: inherit; resize: vertical;"></textarea>
           </div>
 
-          <button type="submit" class="btn" style="padding: 16px; font-size: 16px; margin-top: 10px; cursor: pointer; width: 100%;">Enviar Pedido</button>
+          <button type="submit" class="btn"
+            style="padding: 16px; font-size: 16px; margin-top: 10px; cursor: pointer; width: 100%;">Enviar
+            Pedido</button>
         </form>
       </div>
     </article>
@@ -103,4 +126,5 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </html>
