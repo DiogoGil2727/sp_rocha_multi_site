@@ -466,7 +466,27 @@ a{color:inherit;text-decoration:none}
   /* esconde scroll bar (opcional) */
   scrollbar-width:none;
 }
-.mosaicLoop__track::-webkit-scrollbar{ display:none; }
+.mosaicLoop__track{
+scrollbar-width: thin; /* Firefox */
+scrollbar-color: rgba(199,162,74,.55) rgba(20,24,34,.45);
+}
+
+
+/* Chrome / Edge / Safari */
+.mosaicLoop__track::-webkit-scrollbar{
+height:10px;
+}
+.mosaicLoop__track::-webkit-scrollbar-track{
+background: rgba(20,24,34,.45);
+border-radius:999px;
+}
+.mosaicLoop__track::-webkit-scrollbar-thumb{
+background: rgba(199,162,74,.55);
+border-radius:999px;
+}
+.mosaicLoop__track::-webkit-scrollbar-thumb:hover{
+background: rgba(199,162,74,.8);
+}
 .mosaicLoop__track:active{ cursor: grabbing; }
 
 /* Itens */
