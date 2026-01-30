@@ -519,6 +519,59 @@ background: rgba(199,162,74,.8);
   pointer-events:none;
 }
 
+/* ===== MOBILE NAV ===== */
+
+.menuBtn{
+  display:none; /* aparece só no mobile */
+  border:1px solid var(--stroke);
+  background:rgba(20,24,34,.65);
+  color:var(--text);
+  padding:8px 10px;
+  border-radius:12px;
+  cursor:pointer;
+}
+.menuBtn:hover{ border-color: rgba(199,162,74,.45); }
+
+.navlinks--desktop{ display:flex; }
+
+/* dropdown */
+.mobileMenu{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 56px; /* ajusta se a nav for mais alta */
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.mobileMenu__panel{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  background: rgba(15,17,21,.92);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.mobileMenu__panel a{
+  padding: 14px 14px;
+  color:#cbd5e1;
+  border-bottom:1px solid var(--stroke);
+}
+.mobileMenu__panel a:last-child{ border-bottom:0; }
+.mobileMenu__panel a:hover{ background: rgba(199,162,74,.10); }
+
+/* breakpoint */
+@media (max-width: 640px){
+  .navlinks--desktop{ display:none; }
+  .menuBtn{ display:inline-flex; align-items:center; justify-content:center; }
+  .nav{ position: relative; } /* para o dropdown “ancorar” bem */
+}
+
+
 /* Variações no mosaico */
 .mosaicLoop__item--wide{ grid-column: span 2; }
 .mosaicLoop__item--tall{ grid-row: span 2; }
