@@ -15,14 +15,37 @@
 <body>
   <div class="container">
     <nav class="nav">
-      <div class="brand"><a href="index.html">SP ROCHA</a></div>
-      <div class="navlinks">
-        <a href="roda-foz.html">Roda da Foz</a>
-        <a href="roda-centro.html">Roda ao Centro</a>
-        <a class="square_button" href="musicas.html">Músicas</a>
-        <a class="square_button" href="booking.html">Booking</a>
-      </div>
-    </nav>
+  <div class="brand"><a href="index.html">SP ROCHA</a></div>
+
+  <!-- Botão do menu (só aparece no mobile) -->
+  <button class="menuBtn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Links desktop -->
+  <div class="navlinks navlinks--desktop">
+    <a href="roda-foz.html">Roda da Foz</a>
+    <a href="roda-centro.html">Roda ao Centro</a>
+    <a class="square_button" href="musicas.html">Músicas</a>
+    <a class="square_button" href="booking.html">Booking</a>
+  </div>
+</nav>
+
+<!-- Menu mobile (dropdown) -->
+<div class="mobileMenu" id="mobileMenu" hidden>
+  <div class="mobileMenu__panel">
+    <a href="roda-foz.html">Roda da Foz</a>
+    <a href="roda-centro.html">Roda ao Centro</a>
+    <a href="musicas.html">Músicas</a>
+    <a href="booking.html">Booking</a>
+  </div>
+</div>
+
 
     <section class="hero">
       <div class="hero__banner"></div>
@@ -136,3 +159,40 @@
 </script>
 
 </html>
+<script>
+  (() => {
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+
+    function closeMenu(){
+      menu.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+    }
+
+    function toggleMenu(){
+      const willOpen = menu.hidden === true;
+      menu.hidden = !willOpen;
+      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    }
+
+    btn.addEventListener("click", toggleMenu);
+
+    // fecha ao clicar fora
+    document.addEventListener("click", (e) => {
+      if (menu.hidden) return;
+      const clickedInside = menu.contains(e.target) || btn.contains(e.target);
+      if (!clickedInside) closeMenu();
+    });
+
+    // fecha ao mudar de tamanho (ex: rodar telemóvel / voltar a desktop)
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 640) closeMenu();
+    });
+
+    // fecha ao clicar num link
+    menu.addEventListener("click", (e) => {
+      if (e.target.closest("a")) closeMenu();
+    });
+  })();
+</script>
